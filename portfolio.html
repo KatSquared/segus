@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <title>Pracownia Projektowa Violet-Arch</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="icon" type="image/x-icon" href="public/images/va-icon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d7195f3535.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!---------- Shorthand ----------->   
+
+<section class="shorthand">
+    <a href="index.html" style="padding: 0; padding-right: 10px"><img src="public/images/valogo.png"></a>
+    <div class="shorthand-contact">
+        <a href="tel:+48504412332">
+            <i class="fa-solid fa-mobile"></i>+48 504 412 332
+        </a>
+        <a href="tel:91 834 56 78">
+            <i class="fa fa-phone"></i>91 834 56 78
+        </a>
+        <a href="mailto:wioletta.kmita@gmail.com">
+            <i class="fa-solid fa-envelope"></i> wioletta.kmita@gmail.com
+        </a>
+    </div>
+    <div class="shorthand-menu">
+        <div class="shorthand-menu__label">
+            <p>MENU</p>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </div>
+        
+        <div class="menu-links" id="menuLinks"> 
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html" onclick="hideMenu()">STRONA GŁÓWNA</a></li>
+                <li><a href="portfolio.html" onclick="hideMenu()">PROJEKTY</a></li>
+                <li><a href="index.html#kroki" onclick="hideMenu()">NASZA OFERTA</a></li>
+                <li><a href="index.html#about" onclick="hideMenu()">O PRACOWNI</a></li>
+                <li><a href="index.html#testimonials" onclick="hideMenu()">REFERENCJE</a></li>
+                <li><a href="#kontakt" onclick="hideMenu()">KONTAKT</a></li>
+                <li>
+                    <div class="menu-contact">
+                        <a href="tel:+48504412332">
+                            +48 504 412 332
+                        <a href="tel:91 834 56 78">
+                            91 834 56 78
+                        </a>
+                        <a href="mailto:wioletta.kmita@gmail.com">
+                            wioletta.kmita@gmail.com
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+            <img src="public/images/va-icon-white.png" alt="">
+        </div>
+    </div>
+</section>
+    
+<!---------- Banner ----------->    
+
+<section class="portfolio__header">
+    <div class="portfolio__text-box"> 
+        <h1>NASZE REALIZACJE</h1>
+        <ul class="portfolio__menu">
+            <li><a href="#komercyjne">BUDYNKI KOMERCYJNE</a></li>
+            <li><a href="#przemyslowe">OBIEKTY PRZEMYSŁOWE</a></li>
+            <li><a href="#mieszkaniowe">BUDYNKI MIESZKALNE</a></li>
+            <li><a href="#rewitalizacje">OBIEKTY ZABYTKOWE I REWITALIZACJE</a></li>
+        </ul>
+    </div>
+    <overlay></overlay>
+    <div><img class="portfolio__ba" src="public/images/banner_portfolio.jpg"></div>
+</section>
+    
+    
+<!------- Main -------->
+
+<section class="portfolio">
+    <!-- Komercyjne -->
+    <div class="portfolio__leading" id="komercyjne">
+        <div class="portfolio__leading-col">
+            <h1>Obiekty<br>komercyjne</h1> 
+            <h5>Architektura wizytówką biznesu</h5>
+            <p>Doskonale rozumiemy, że głównym celem budownictwa 
+                komercyjnego jest stymulowanie prężnego rozwoju 
+                przedsięzięcia inwestora. Projektując 
+                tworzymy dochodowe inwestycje - przyciągające 
+                klientów, usprawniające pracę i rozwijające działalność.
+            </p>    
+        </div>
+        <div class="portfolio__leading-img">
+            <div class="portfolio-item-container leading-img" onclick="openPopup(this)">
+                <div class="portfolio-img">
+                    <img src="public/images/pic12.jpg">
+                </div>
+                <div class="portfolio-item-layer">
+                    <div class="portfolio-desc">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <h5>Domy w zabudowie bliźniaczej "Edward"<br>
+                            <span>| Kiczarowo</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <div class="grid portfolio__grid">
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/banner1.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"
+                        <br><span>| Kiczarowo</span></h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/banner2.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"
+                        <br><span>| Kiczarowo</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/pic2.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"
+                        <br><span>| Kiczarowo</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Komercyjne -->
+    <div class="portfolio__leading reverse-column" id="przemyslowe">
+        <div class="portfolio__leading-img">
+            <div class="portfolio-item-container leading-img" onclick="openPopup(this)">
+                <div class="portfolio-img">
+                    <img src="public/images/2.jpg">
+                </div>
+                <div class="portfolio-item-layer">
+                    <div class="portfolio-desc">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <h5>Domy w zabudowie bliźniaczej "Edward"
+                            <br><span>| Kiczarowo</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio__leading-col">
+            <h1>Budynki<br>przemysłowe</h1>
+            <h5>Solidne i bezpieczne rozwiązania na miarę</h5>
+            <p>Posiadamy doświadczenie we współpracy z inwestorami działącymi
+                na większą i mniejszą skalę. Do każdego projektu podchodzimy 
+                indywidualnie, zbierając wiedzę na temat szczególnych wymagań
+                branży i przepisów technicznych.
+            </p>
+        </div>
+    </div> 
+
+    <div class="grid portfolio__grid">
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/banner3.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"<br>
+                        <span>| Kiczarowo</span>
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/pic11.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"
+                        <br><span>| Kiczarowo</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/pic3.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"
+                        <br><span>| Kiczarowo</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mieszkalne -->
+    <div class="portfolio__leading" id="mieszkaniowe">
+        <div class="portfolio__leading-col">
+            <h1>Zabudowa<br>mieszkaniowa</h1> 
+            <h5>Dobry projekt stanowi o komforcie życia</h5>
+            <p>Bierzemy pod uwagę budżet i wymagania lokalnych planów 
+                zagospodarowania przestrzennego. Maksymalnie 
+                dostosowujemy je do wymarzonego obiektu inwestora, 
+                urzeczywistniamy wizje o idealnym życiu.
+            </p>    
+        
+        </div>
+        <div class="portfolio__leading-img">
+            <div class="portfolio-item-container leading-img" onclick="openPopup(this)">
+                <div class="portfolio-img">
+                    <img src="public/images/pic7.jpg">
+                </div>
+                <div class="portfolio-item-layer">
+                    <div class="portfolio-desc">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <h5>Domy w zabudowie bliźniaczej "Edward"
+                            <br><span>| Kiczarowo</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="grid portfolio__grid">
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/pic8.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"
+                        <br><span>| Kiczarowo</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/pic10.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"
+                        <br><span>| Kiczarowo</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/pic13.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"
+                        <br><span>| Kiczarowo</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rewitalizacje -->
+    <div class="portfolio__leading reverse-column" id="rewitalizacje">
+        <div class="portfolio__leading-img">
+            <div class="portfolio-item-container leading-img" onclick="openPopup(this)">
+                <div class="portfolio-img">
+                    <img src="public/images/pic9.jpg">
+                </div>
+                <div class="portfolio-item-layer">
+                    <div class="portfolio-desc">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <h5>Domy w zabudowie bliźniaczej "Edward"
+                            <br><span>| Kiczarowo</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio__leading-col">
+            <h1>Zabytki<br>i rewitalizacje</h1>
+            <h5>Nowe tchnienie tradycji</h5>
+            <p>W oparciu o dogłębną inwentaryzację, badania architektoniczne
+                i archeologiczne opracowujemy projekty odnowy, przebudowy i rozbudowy,
+                nie tylko przywracają dawną świetność, ale także dostosowują obiekty 
+                do obecnych wymagań bytowych i prawnych.
+            </p> 
+        </div>
+    </div> 
+
+    <div class="grid portfolio__grid">
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/pic4.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"
+                        <br><span>| Kiczarowo</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/pic6.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"
+                        <br><span>| Kiczarowo</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item-container" onclick="openPopup(this)">
+            <div class="portfolio-img">
+                <img src="public/images/pic1.jpg" alt="">
+            </div>
+            <div class="portfolio-item-layer">
+                <div class="portfolio-desc">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <h5>Domy w zabudowie bliźniaczej "Edward"
+                        <br><span>| Kiczarowo</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!---------- Image preview popup ----------->
+
+<div class="popup-container img-popup hidden" id="popup">
+    <div class="flex">
+        <i onclick="closePopup()" class="fa-sharp fa-solid fa-xmark"></i>
+        <div class="enlarged-image">
+            <i class="fa-solid fa-chevron-left" onclick="prevImg()"></i>
+            <img src="public/images/2.jpg" id="enlarged-image">
+            <i class="fa-solid fa-chevron-right" onclick="nextImg()"></i>
+        </div>
+    </div>
+</div>
+
+<!------ Contact Footer ------>
+
+<section class="contact-footer" id="kontakt">
+    <div class="contact-footer-col contact-footer-menu">
+        <h5>MENU</h5>
+        <ul class="contact-menu">
+            <li><a href="index.html#landing">Strona główna</a></li>
+            <li><a href="portfolio.html">Projekty</a></li>
+            <li><a href="index.html#kroki">Nasza oferta</a></li>
+            <li><a href="index.html#about">O pracowni</a></li>
+            <li><a href="index.html#testimonials">Referencje</a></li>
+        </ul>
+    </div>
+
+    <div class="contact-footer-col">
+        <h5>Pracownia Projektowa</h5>
+        <ul>
+            <li><i class="fa fa-home"></i><span>Adres:</span>
+                <br>ul. Szczecińska 59<br>73-110 Stargard<br>II Piętro</li>
+            <li><i class="fa-solid fa-business-time"></i><span>Godziny pracy:</span>
+                <br><span>PN-PT: </span>8:00 - 16:00</li>
+        </ul>
+    </div>
+
+    <div class="contact-footer-col dojazd">
+        <h5>Dojazd</h5>
+        <a href="https://goo.gl/maps/rrpUsVMW7rFqGvtt8" target="_blank">
+            <i class="fa-solid fa-location-dot"></i>
+        </a> 
+    </div>
+
+    <div class="contact-footer-col">
+        <h5>Dane kontaktowe</h5>
+        <ul>
+            <li><a href="tel:+48504412332">
+                <i class="fa-solid fa-mobile"></i>+48 504 412 332
+            </li></a>
+            <li><a href="tel:91 834 56 78">
+                <i class="fa fa-phone"></i>91 834 56 78
+            </li></a>
+            <li><a href="mailto:wioletta.kmita@gmail.com">
+                <i class="fa-solid fa-envelope"></i> wioletta.kmita@gmail.com
+            </a></li>
+            <li><span>NIP:</span> 494 495 565 77</li>
+        </ul>
+    </div>
+</section>
+
+<section class="footer-credit">
+    <p>Wykonanie: <a href="https://www.katarzyna-kmita.com/" style="text-decoration: underline;">Katarzyna Kmita</a></p>
+</section>
+
+
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var menuLinks = document.getElementById("menuLinks");
+
+    function showMenu() {
+        menuLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        menuLinks.style.right = "-400px";
+    }
+</script> 
+
+<!---- JavaScript for scrolling to sections on mobile ---->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Smooth scrolling for anchor links
+      const smoothScrollLinks = document.querySelectorAll("a[href^='#']");
+  
+      smoothScrollLinks.forEach(function(link) {
+        link.addEventListener("click", function(e) {
+          e.preventDefault();
+  
+          const target = document.querySelector(this.hash);
+          if (target) {
+            const targetOffset = target.offsetTop;
+            window.scrollTo({
+              top: targetOffset,
+              behavior: "smooth"
+            });
+          }
+        });
+      });
+    });
+</script>
+
+<!---JavaScript for image popup-->
+<script src="public/portfolio.js"></script>
+    
+</body>
+</html>    
