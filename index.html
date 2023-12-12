@@ -2,37 +2,61 @@
 <html lang="pl-PL">
 
 <head>
-    <title>Pracownia Projektowa Violet-Arch</title>
+    <title>Witryna internetowa SEGUS sp z o. o.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="icon" type="image/x-icon" href="public/images/va-icon.ico">
-    <link rel="stylesheet" href="public/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="src/img/logo.ico">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d7195f3535.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <div class="page-background"></div>
+
+<div class="vertical-line left"></div> 
+<div class="vertical-line right"></div> 
 
 <!---------- Shorthand ----------->   
 
-<section class="shorthand">
-    <a href="index.html" style="padding: 0; padding-right: 10px"><img src="public/images/valogo.png"></a>
-    <div class="shorthand-contact">
-        <a href="tel:+48504412332">
-            <i class="fa-solid fa-mobile"></i>+48 504 412 332
+<section class="nav-container">
+    <a href="index.html">
+        <img class="navbar-logo" src="src/img/logo.svg" alt="Logo SEGUS sp. z o. o.">
+    </a>
+    <nav>
+        <ul>
+            <li>
+                <a href="#about">Nasza firma</a>
+            </li>
+            <li>
+                <a href="#services">Usługi</a>
+            </li>
+            <li>
+                <a href="#projects">Realizacje</a>
+            </li>
+            <li>
+                <a href="#testimonials">Referencje</a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="contact">
+        <a class="phone-icon-container" href="tel:0914214210">
+            <img src="./src/img/icon-phone.svg" alt="Ikona telefonu">
         </a>
-        <a href="91 834 56 78">
-            <i class="fa fa-phone"></i>91 834 56 78
-        </a>
-        <a href="mailto:wioletta.kmita@gmail.com">
-            <i class="fa-solid fa-envelope"></i> wioletta.kmita@gmail.com
-        </a>
-    </div>
-    <div class="shorthand-menu">
-        <div class="shorthand-menu__label">
+        <div class="divider">.</div>
+        <ul>
+            <li>
+                <a href="#contact">Kontakt</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!---mobile menu-->
+    <div class="mobile-nav-container">
+        <div class="shorthand-menu-label">
             <p>MENU</p>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </div>
@@ -59,9 +83,6 @@
                     </div>
                 </li>
             </ul>
-
-
-            <img src="public/images/va-icon-white.png" alt="Logo pracowni projektowej Violet-Arch">
         </div>
     </div>
 </section>
@@ -69,58 +90,39 @@
 
 <!---------- Main ----------->    
 
-<section class="header" id="landing">
-    <div class="text-box">
-        <h1>Pracownia zapewniająca <span>pełne</span> wsparcie</h1>
-        <h5>Projektujemy budynki indywidualne i typowe, przeprowadzamy 
-            rewitalizacje, opiekujemy się całym procesem 
-            administracyjnym. Dbamy o to, by Twoja noga nigdy nie postawiła w urzędzie.</h5>
-        <button class="hero-btn" onclick="window.location.href='#oferta';">
-            <a href="#oferta">Poznaj naszą ofertę</a>
-        </button>
-        <br><a href="#oferta"><i class="fa-solid fa-chevron-down" onclick="window.location.href='#oferta';"></i></a>
-    </div>
-    <overlay>.</overlay>
-    <div class="ban1"><img class="ba" src="public/images/banner1.jpg"></div>
-    <div class="ban2"><img class="ba" src="public/images/banner2.jpg"></div>
-    <div class="ban3" ><img class="ba" src="public/images/banner3.jpg"></div>
+<section class="landing" id="landing">
     
-    <div class="header__label">
-        <div class="header__label-text">
-            <div class="label1">
-                <p>Dom wielorodzinny "Robert" w Kiczarowie</p>
-                <a href="portfolio.html"> Zobacz projekt</a>
+    <div class="vertical-line left"></div> 
+    <div class="vertical-line right"></div> 
+
+    <div class="hero-container">
+        <div class="hero">
+            <h1>Inżynieria Gazownicza na</h1>
+            <div>
+                <h1 class="animate">najwyższym</h1>
+                <div class="underline"></div>
             </div>
-            <div class="label2">
-                <p>Dom jednorodzinny "Artur" w Kobylance</p>
-            <a href="portfolio.html"> Zobacz projekt</a>
-            </div>
-            <div class="label3">
-                <p>Lokal gastronomiczny w Szczecinie</p>
-            <a href="portfolio.html"> Zobacz projekt</a>
+            <h1>poziomie</h1>
+        </div>
+        <div class="sub-hero-container">
+            <div class="sub-hero">
+                <button onclick="window.location.href='#oferta';" aria-label="Kliknij by przejść do formularza kontaktowego">
+                    Poznaj naszą ofertę
+                    <img src="./src/img/arrow-right.svg" alt="Strzałka w prawo">
+                </button>
+                <p><span>SEGUS</span> to znak jakości w projektowaniu i wdrażaniu sieci i instalacji gazowych.  
+                </p>
             </div>
         </div>
     </div>
+    
 </section>
 
 
-<!---------- Intro + Partnerzy ---------->    
+<!---------- Intro ---------->    
 
 
 
-<section class="partnerzy">
-    <div class="partnerzy-flex">
-        <img src="public/images/pa_1.PNG" alt="">
-        <img src="public/images/pa_3.PNG" alt="">
-        <img src="public/images/pa_4.PNG" alt="">
-        <img src="public/images/pa_5.PNG" alt="">
-        <img src="public/images/pa_6.PNG" alt="">
-        <img src="public/images/pa_7.PNG" alt="">
-        <img src="public/images/pa_8.PNG" alt="">
-        <img src="public/images/pa_9.PNG" alt="">
-        <img src="public/images/pa_10.PNG" alt="">
-    </div>
-</section>
 
 
 
@@ -130,7 +132,7 @@
     <!-- Komercyjne -->
         <div class="row animate">
             <div class="oferta-pic top-pic">
-                <img src="public/images/2.jpg">
+                <img src="src/img/2.jpg">
                 <div class="oferta-pic-desc">
                     <h5>Domy w zabudowie bliźniaczej "Edward" <br><span>| Kiczarowo</span>
                     </h5>
@@ -153,7 +155,7 @@
         <!-- Przemysłowe -->
         <div class="row animate">
             <div class="oferta-pic bottom-pic">
-                <img src="public/images/3.jpg">
+                <img src="src/img/3.jpg">
                 <div class="oferta-pic-desc">
                     <h5>Domy w zabudowie bliźniaczej "Edward" <br><span>| Kiczarowo</span>
                     </h5>
@@ -175,7 +177,7 @@
         <!-- Mieszkalne -->
         <div class="row animate">
             <div class="oferta-pic top-pic">
-                <img src="public/images/2.jpg">
+                <img src="src/img/2.jpg">
                 <div class="oferta-pic-desc">
                     <h5>Domy w zabudowie bliźniaczej "Edward" <br><span>| Kiczarowo</span>
                     </h5>
@@ -193,7 +195,7 @@
         <!-- Rewitalizacje -->
         <div class="row animate">
             <div class="oferta-pic bottom-pic">
-                <img src="public/images/3.jpg">
+                <img src="src/img/3.jpg">
                 <div class="oferta-pic-desc">
                     <a href="portfolio.html#rewitalizacje">
                         <h5>Domy w zabudowie bliźniaczej "Edward" <br><span>| Kiczarowo</span>
@@ -254,7 +256,7 @@
             </div>
 
             <div class="kroki-col col-1 animate">
-                <img src="public/images/dialogue.svg">
+                <img src="src/img/dialogue.svg">
                 <div class= "kroki-col-number">
                     <p>1</p>
                 </div>
@@ -270,7 +272,7 @@
                     efektywnie zrealizować wizję i cele inwestora.</p>
             </div>
             <div class="kroki-col col-2 animate" >
-                <img src="public/images/compass.svg">
+                <img src="src/img/compass.svg">
                 <div class= "kroki-col-number">
                     <p>2</p>
                 </div>
@@ -289,7 +291,7 @@
                 i rzeczoznawców.</p>
             </div>
             <div class="kroki-col col-3 animate">
-                <img src="public/images/house-plan.svg">
+                <img src="src/img/house-plan.svg">
                 <div class= "kroki-col-number">
                     <p>3</p>
                 </div>
@@ -324,7 +326,7 @@
             </p>
             <div class="signature">
                 <p>---</p>
-                <img src="public/images/wklogo.png" alt="">
+                <img src="src/img/wklogo.png" alt="">
             </div>
         </div>
     </div>
@@ -431,7 +433,7 @@
 
 <section class="contact-form-container">
     <div class="contact-flex">
-            <img src="public/images/about.jpg" alt="Skontaktuj się z nami.">
+            <img src="src/img/about.jpg" alt="Skontaktuj się z nami.">
         <div class="contact-form" method="post">
             <div class="contact-col">
                 <h3>Umów darmowe spotkanie</h3>
@@ -559,9 +561,9 @@
 
 
 <!----JavaScript for testimonials carousel---->
-<script src="public/index.js"></script>
-<script src="public/counting-up-animation.js"></script>
-<script src="public/scroll-animations.js"></script>
+<script src="src/index.js"></script>
+<script src="src/counting-up-animation.js"></script>
+<script src="src/scroll-animations.js"></script>
 
 </body>
 </html>
