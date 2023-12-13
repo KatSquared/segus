@@ -6,14 +6,7 @@
     --body-text-size: 15px;
     --body-text-weight: 400;
 
-    --hero-text-color: #FFBD17;
-    --hero-text-size: 50px;
-    --hero-text-weight: 800;
-
-    --header-size: 60px;
-    --subheader-size: 48px;
-    --button-text-size: 18px;
-
+    --hero: #FFBD17;
     --active: #df7001;
     --light-grey: #B2B2B2;
     --mid-grey: #959595;
@@ -22,9 +15,9 @@
 
     --big-vertical-margins: 16.5%;
     --small-vertical-margins: 10.3%;
-    --big-horizontal-margins: 100px;
-    --small-horizontal-margins: 60px;
-    --smallest-margin: 15px;
+    --big-vertical-gap: 5%;
+    --small-vertical-gap: 2%;
+    --horizontal-margins: 8%;
 
     --transparent-border: rgba(255, 255, 255, 0.15) 1px solid;
 }
@@ -49,7 +42,7 @@ html, body {
 } 
 
 section:not(.landing, .nav-container, .contact-footer) {
-    margin: var(--big-horizontal-margins) var(--small-vertical-margins);
+    margin: var(--horizontal-margins) var(--small-vertical-margins);
 }
 
 h1, h2, h3, p, a, button, span {
@@ -57,22 +50,22 @@ h1, h2, h3, p, a, button, span {
     z-index: 2;
 }
 h1, h1 span{
-    font-size: var(--hero-text-size);
+    font-size: 50px;
     color: var(--background);
-    font-weight: var(--hero-text-weight);
+    font-weight: 800;
     line-height: 62px;
 }
-h2 {
-    font-size: var(--header-size);
+h2, h2 span {
+    font-size: 38px;
 }
 h3 {
-    font-size: var(--subheader-size);
+    font-size: 20px;
 }
 h2::after, h3::after, .underline {
     content: '';
     width: 0%;
     height: 7px;
-    background: var(--hero-text-color);
+    background: var(--hero);
     display: block;
     margin-top: -5px;
     position: relative;
@@ -88,8 +81,8 @@ h2.animating::after, h3.animating::after, .underline {
     z-index: -1;
 }
 
-p span {
-    color: var(--hero-text-color);
+p span, h2 span {
+    color: var(--hero);
 }
 
 a {
@@ -107,14 +100,19 @@ li {
     color: var(--background);
 }
 
+img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
 button {
-    font-size: var(--button-text-size);
+    font-size: 18px;
     cursor: pointer;
     border: none;
     padding: 15px 20px;
     display: inline-block;
     transition: 1s;
-    background: var(--hero-text-color);
+    background: var(--hero);
     position: relative;
     z-index: 2 !important;
     display: flex;
@@ -185,7 +183,7 @@ button img {
     }
 } */
 
-/*-------------- Shorthand ----------------*/
+/*-------------- TOP BAR (NAVIGATION) ----------------*/
 
 .nav-container {
     padding: 0 calc(var(--big-vertical-margins) / 2);
@@ -393,7 +391,7 @@ nav.contact img  {
 }
 
 
-/*-------------- Landing ----------------*/
+/*-------------- LANDING ----------------*/
 
 .landing {
     min-height: 100vh;
@@ -465,7 +463,7 @@ nav.contact img  {
 }
 .sub-hero p span {
     font-size: 25px;
-    color: var(--hero-text-color);
+    color: var(--hero);
     font-weight: 700;
 }
 
@@ -473,6 +471,43 @@ nav.contact img  {
 /* @media (min-width: 900px) {
 
 } */
+
+
+/*--------------- ABOUT -------------*/
+
+
+.section-intro {
+    margin-bottom: var(--horizontal-margins);
+}
+.flex-container {
+    display: flex;
+    gap: var(--big-vertical-gap);
+}
+section.about .flex-container > * {
+    width: 50% ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-------------- Oferta ----------------*/
 
