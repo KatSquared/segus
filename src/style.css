@@ -518,8 +518,10 @@ nav.contact img  {
     background: rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 1px;
-    margin-bottom: -7px;
     position: relative;
+}
+.about .horizontal-line {
+    margin-bottom: -7px;
 }
 .horizontal-line::after {
     width: 10px;
@@ -604,13 +606,13 @@ section.services {
 }
 .services .column-header h3 {
     font-size: 13px;
-    margin-bottom: 0;
     font-weight: 700;
+    width: max-content;
+    margin-bottom: 0;
     padding: 10px 30px;
     background: var(--hero);
-    width: max-content;
 }
-.services img {
+.services .column-header img {
     padding-left: 10px;
     height: 35px;
 }
@@ -709,13 +711,67 @@ section.services {
     margin-top: 0;
 }
 
+.why-us-grid {
+    margin-left: var(--big-vertical-margins);
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.why-us .flex-container {
+    gap: var(--big-vertical-gap);
+    width: 50vw;
+}
+.why-us img {
+    flex-basis: auto;
+    width: 100px;
+    padding: 40px 20px;
+}
+.why-us .icon-container {
+    flex-basis: max-content;
+    height: 100%;
+    background-color: var(--hero);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.why-us .flex-container div:not(.icon-container) {
+    padding: 15px 0;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0;
+}
+.why-us h4 {
+    margin-bottom: 15px;
+    max-width: 230px;
+}
+.why-us .flex-container:last-child {
+    margin-bottom: 0;
+}
+
+/* area of work */
+
+.area-of-work img {
+    width: calc(100% - (var(--big-vertical-margins) * 2));
+    object-fit: cover;
+    margin: 0 var(--big-vertical-margins);
+}
 
 
+/*---------- PROJECTS -------*/
 
+section.projects {
+    background: var(--hero);
+    padding: var(--horizontal-margins) var(--small-vertical-margins);
+}
 
-
-
-
+.projects .horizontal-line, .projects .horizontal-line::after, .projects .underline {
+    background: var(--body-color);
+}
+.projects .horizontal-line::after {
+    width: 7px;
+    height: 7px;
+}
 
 
 
