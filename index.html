@@ -67,23 +67,33 @@
         <div class="menu-links" id="menuLinks"> 
             <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
             <ul>
-                <li><a href="#landing" onclick="hideMenu()">STRONA GŁÓWNA</a></li>
-                <li><a href="portfolio.html" onclick="hideMenu()">PROJEKTY</a></li>
-                <li><a href="#services" onclick="hideMenu()">NASZA OFERTA</a></li>
-                <li><a href="#about" onclick="hideMenu()">O PRACOWNI</a></li>
-                <li><a href="#testimonials" onclick="hideMenu()">REFERENCJE</a></li>
-                <li><a href="#kontakt" onclick="hideMenu()">KONTAKT</a></li>
                 <li>
-                    <div class="menu-contact">
-                        <a href="tel:+48504412332">
-                            +48 504 412 332
-                        <a href="tel:91 834 56 78">
-                            91 834 56 78
-                        </a>
-                        <a href="mailto:wioletta.kmita@gmail.com">
-                            wioletta.kmita@gmail.com
-                        </a>
-                    </div>
+                    <a href="#about">Nasza firma</a>
+                </li>
+                <li>
+                    <a href="#services">Usługi</a>
+                </li>
+                <li>
+                    <a href="#projects">Realizacje</a>
+                </li>
+                <li>
+                    <a href="#testimonials">Referencje</a>
+                </li>
+                <li class="medium-device">
+                    <a href="#contact">Kontakt</a>
+                </li>
+            </ul>
+            <ul class="menu-contact">
+                <li>
+                    <a class="phone-icon-container" href="tel:0914214210">
+                        <img src="./src/img/icon-phone.svg" alt="Ikona telefonu">tel: 091 421 4210</li>
+                    </a>
+                <li>
+                    <img src="./src/img/icon-fax.svg" alt="Ikona faksu">fax: 091 421 4211</li>
+                <li>
+                    <a class="phone-icon-container" href="mailto:biuro@segus.pl">
+                        <img src="./src/img/icon-mail.svg" alt="Ikona e-mailu">e-mail: biuro@segus.pl
+                    </a>
                 </li>
             </ul>
         </div>
@@ -111,10 +121,12 @@
         </div>
         <div class="sub-hero-container">
             <div class="sub-hero">
-                <button onclick="window.location.href='#oferta';" aria-label="Kliknij by przejść do formularza kontaktowego">
-                    SKONTAKTUJ SIĘ Z NAMI
-                    <img src="./src/img/arrow-right.svg" alt="Strzałka w prawo">
-                </button>
+                <div class="sub-hero-button-container">
+                    <button onclick="window.location.href='#oferta';" aria-label="Kliknij by przejść do formularza kontaktowego">
+                        SKONTAKTUJ SIĘ Z NAMI
+                        <img src="./src/img/arrow-right.svg" alt="Strzałka w prawo">
+                    </button>
+                </div>
                 <p><span>SEGUS</span> to znak jakości w projektowaniu i wdrażaniu sieci i instalacji gazowych.  
                 </p>
             </div>
@@ -290,7 +302,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-container" style="margin-bottom: 0;">
+        <div class="flex-container">
             <div class="icon-container">
                 <img src="./src/img/icon-grid5.svg" alt="Ikona strzałki pnącej się w górę">
             </div>
@@ -585,8 +597,9 @@
                     <img src="./src/img/icon-fax.svg" alt="Ikona faksu">fax: 091 421 4211</li>
                 <li>
                     <a class="phone-icon-container" href="mailto:biuro@segus.pl">
-                        <img src="./src/img/icon-mail.svg" alt="Ikona e-mailu">e-mail: biuro@segus.pl</li>
+                        <img src="./src/img/icon-mail.svg" alt="Ikona e-mailu">e-mail: biuro@segus.pl
                     </a>
+                </li>
             </ul>
         </div>
 
