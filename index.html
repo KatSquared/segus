@@ -23,9 +23,10 @@
 <!---------- Shorthand ----------->   
 
 <section class="nav-container">
-    <a href="index.html">
-        <img class="navbar-logo" src="src/img/logo.svg" alt="Logo SEGUS sp. z o. o.">
+    <a class="main-logo-container" href="#landing">
+        <img class="main-logo" src="src/img/logo.svg" alt="Logo SEGUS sp. z o. o.">
     </a>
+    <div class="divider"></div>
     <nav>
         <ul>
             <li>
@@ -40,13 +41,15 @@
             <li>
                 <a href="#testimonials">Referencje</a>
             </li>
+            <li class="medium-device">
+                <a href="#contact">Kontakt</a>
+            </li>
         </ul>
     </nav>
     <nav class="contact">
         <a class="phone-icon-container" href="tel:0914214210">
             <img src="./src/img/icon-phone.svg" alt="Ikona telefonu">
         </a>
-        <div class="divider">.</div>
         <ul>
             <li>
                 <a href="#contact">Kontakt</a>
@@ -287,7 +290,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex-container">
+        <div class="flex-container" style="margin-bottom: 0;">
             <div class="icon-container">
                 <img src="./src/img/icon-grid5.svg" alt="Ikona strzałki pnącej się w górę">
             </div>
@@ -323,7 +326,7 @@
         <p>W SEGUS, nasza pasja i profesjonalizm w dziedzinie gazownictwa obejmują województwo zachodniopomorskie. Zlokalizowani w centrum Szczecina, obsługujemy projekty na obszarze zachodniej połowy regionu. Poniżej znajduje się mapa z lokalizacją zrealizowanych projektów.
         </p>
     </div>
-    <img src="./src/img/PLACEHOLDER-map.PNG" alt="Mapa z zaznaczonym obszarem działania.">
+    <img class="mid-width" src="./src/img/PLACEHOLDER-map.PNG" alt="Mapa z zaznaczonym obszarem działania.">
 </section>
 
 
@@ -526,6 +529,14 @@
             </p>
         </form>    
     </div>
+
+    <div class="horizontal-line section-divider"></div>
+
+    <div class="mid-width">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8464.407104712009!2d14.568796766154312!3d53.46410160242384!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa0bcf442a463d%3A0xac3265f00ce2565a!2sD%C4%99bog%C3%B3rska%2022%2C%2071-717%20Szczecin%2C%20Polska!5e0!3m2!1spl!2sus!4v1702933139244!5m2!1spl!2sus" 
+            width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
 </section>
 
 
@@ -533,10 +544,84 @@
 
 
 <section class="footer" id="footer">
+    <div class="footer-underline"></div>
     
+    <div class="menu-container">
+        <a href="#landing" class="footer-header">
+            <img class="main-logo" src="src/img/logo.svg" alt="Logo SEGUS sp. z o. o.">
+        </a>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#landing">Start</a>
+                </li>
+                <li>
+                    <a href="#about">Nasza firma</a>
+                </li>
+                <li>
+                    <a href="#services">Usługi</a>
+                </li>
+                <li>
+                    <a href="#projects">Realizacje</a>
+                </li>
+                <li>
+                    <a href="#testimonials">Referencje</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="vertical-line left"></div>
+
+    <div class="footer-info">
+        <div class="contact-info">
+            <p class="footer-header">Dane kontaktowe</p>
+            <ul>
+                <li>
+                    <a class="phone-icon-container" href="tel:0914214210">
+                        <img src="./src/img/icon-phone.svg" alt="Ikona telefonu">tel: 091 421 4210</li>
+                    </a>
+                <li>
+                    <img src="./src/img/icon-fax.svg" alt="Ikona faksu">fax: 091 421 4211</li>
+                <li>
+                    <a class="phone-icon-container" href="mailto:biuro@segus.pl">
+                        <img src="./src/img/icon-mail.svg" alt="Ikona e-mailu">e-mail: biuro@segus.pl</li>
+                    </a>
+            </ul>
+        </div>
+
+        <div class="vertical-line">.</div>
+
+        <div class="company-info">
+            <p class="footer-header">Dane firmy</p>
+            <ul>
+                <li>Numer KRS: 0000110301</li>
+                <li>NIP: 955-20-38-979</li>
+                <li>Regon: 812503971</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="address">
+            <p class="footer-header">Adres</p>
+            <ul>
+                <li>"SEGUS" Sp z o.o.</li>
+                <li>71-717 Szczecin</li>
+                <li>ul. Dębogórska 22</li>
+            </ul>
+    </div>
+
+    <div class="location">
+        <p class="footer-header">Dojazd</p>
+        <a href="https://maps.app.goo.gl/ejii6soSqJnwCuM26">
+            <img src="./src/img/icon-location.svg" alt="Ikona pinezki">
+        </a>
+    </div>
+
+    <div class="footer-underline bottom"></div>
 
     <div class="footer-credit">
-        <p>Projekt i wykonanie: 
+        <p>Autor strony: 
             <a href="https://www.katarzyna-kmita.com/">Katarzyna Kmita</a>
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </p>
