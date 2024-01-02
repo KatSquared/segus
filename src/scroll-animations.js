@@ -15,5 +15,5 @@ const observer = new IntersectionObserver((entries) => {
 
 const elementsToAnimate = document.querySelectorAll('.animate');
 elementsToAnimate.forEach((el) => observer.observe(el));
-console.log(elementsToAnimate);
+// console.log(elementsToAnimate);
 

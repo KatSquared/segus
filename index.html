@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d7195f3535.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -370,12 +369,12 @@
     <!--projects slider-->
 
     <div class="wrapper">
-        <button class="slider-button button-left">
+        <button class="slider-button button-left" id="">
             <img src="./src/img/arrow-right.svg" alt="Strzałka w lewo" aria-label="Kliknij by przejść do poprzedniego slajdu">
         </button>
 
         <div class="slider">
-            <div class="slider-track" id="track">
+            <div class="slider-track" id="">
                 <div class="slider-item">
                     <div class="slider-item-label">
                         <h4>MAGISTRALA GORZÓW</h4>
@@ -428,7 +427,7 @@
             </div>
         </div>
 
-        <button class="slider-button button-right">
+        <button class="slider-button button-right" id="">
             <img src="./src/img/arrow-right.svg" alt="Strzałka w prawo" aria-label="Kliknij by przejść do kolejnego slajdu">
         </button> 
     </div>
@@ -456,8 +455,8 @@
     <!--testimonials slider-->
 
     <div class="wrapper">
-        <button class="slider-button button-left" id="">
-            <img src="./src/img/arrow-right.svg" alt="Strzałka w lewo" aria-label="Kliknij by przejść do poprzedniego slajdu">
+        <button class="slider-button button-left" id="btnLeft"  aria-label="Kliknij by przejść do poprzedniego slajdu">
+            <img src="./src/img/arrow-right.svg" alt="Strzałka w lewo">
         </button>
 
         <div class="slider">
@@ -501,8 +500,8 @@
             </div>
         </div>
 
-        <button class="slider-button button-right">
-            <img src="./src/img/arrow-right.svg" alt="Strzałka w prawo" aria-label="Kliknij by przejść do kolejnego slajdu">
+        <button class="slider-button button-right" id="btnRight" aria-label="Kliknij by przejść do kolejnego slajdu">
+            <img src="./src/img/arrow-right.svg" alt="Strzałka w prawo">
         </button> 
     </div>
 </section>
@@ -578,60 +577,64 @@
         </nav>
     </div>
 
-    <div class="vertical-line left"></div>
-
-    <div class="footer-info">
-        <div class="contact-info">
-            <p class="footer-header">Dane kontaktowe</p>
-            <ul>
-                <li>
-                    <a class="phone-icon-container" href="tel:0914214210">
-                        <img src="./src/img/icon-phone.svg" alt="Ikona telefonu">tel: 091 421 4210</li>
-                    </a>
-                <li>
-                    <img src="./src/img/icon-fax.svg" alt="Ikona faksu">fax: 091 421 4211</li>
-                <li>
-                    <a class="phone-icon-container" href="mailto:biuro@segus.pl">
-                        <img src="./src/img/icon-mail.svg" alt="Ikona e-mailu">e-mail: biuro@segus.pl
-                    </a>
-                </li>
-            </ul>
+    <div class="main-footer">
+        <div class="footer-info">
+            <div class="contact-info">
+                <p class="footer-header">Dane kontaktowe</p>
+                <ul>
+                    <li>
+                        <a class="phone-icon-container" href="tel:0914214210">
+                            <img src="./src/img/icon-phone.svg" alt="Ikona telefonu">tel: 091 421 4210</li>
+                        </a>
+                    <li>
+                        <img src="./src/img/icon-fax.svg" alt="Ikona faksu">fax: 091 421 4211</li>
+                    <li>
+                        <a class="phone-icon-container" href="mailto:biuro@segus.pl">
+                            <img src="./src/img/icon-mail.svg" alt="Ikona e-mailu">e-mail: biuro@segus.pl
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="vertical-line">.</div>
+    
+            <div class="company-info">
+                <p class="footer-header">Dane firmy</p>
+                <ul>
+                    <li>Numer KRS: 0000110301</li>
+                    <li>NIP: 955-20-38-979</li>
+                    <li>Regon: 812503971</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="vertical-line">.</div>
-
-        <div class="company-info">
-            <p class="footer-header">Dane firmy</p>
-            <ul>
-                <li>Numer KRS: 0000110301</li>
-                <li>NIP: 955-20-38-979</li>
-                <li>Regon: 812503971</li>
-            </ul>
+    
+        <div class="location-and-address">
+            <div class="address">
+                    <p class="footer-header">Adres</p>
+                    <ul>
+                        <li>"SEGUS" Sp z o.o.</li>
+                        <li>71-717 Szczecin</li>
+                        <li>ul. Dębogórska 22</li>
+                    </ul>
+            </div>
+        
+            <div class="location">
+                <p class="footer-header">Dojazd</p>
+                <a href="https://maps.app.goo.gl/ejii6soSqJnwCuM26">
+                    <img src="./src/img/icon-location.svg" alt="Ikona pinezki">
+                </a>
+            </div>
         </div>
     </div>
-
-    <div class="address">
-            <p class="footer-header">Adres</p>
-            <ul>
-                <li>"SEGUS" Sp z o.o.</li>
-                <li>71-717 Szczecin</li>
-                <li>ul. Dębogórska 22</li>
-            </ul>
-    </div>
-
-    <div class="location">
-        <p class="footer-header">Dojazd</p>
-        <a href="https://maps.app.goo.gl/ejii6soSqJnwCuM26">
-            <img src="./src/img/icon-location.svg" alt="Ikona pinezki">
-        </a>
-    </div>
+    
 
     <div class="footer-underline bottom"></div>
 
     <div class="footer-credit">
         <p>Autor strony: 
-            <a href="https://www.katarzyna-kmita.com/">Katarzyna Kmita</a>
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <a href="https://www.katarzyna-kmita.com/">Katarzyna Kmita
+                <img src="./src/img/icon-open.svg" alt="New window icon" aria-label="Click to open site developer portfolio in new window.">
+            </a>
         </p>
     </div>
 </section>
@@ -686,7 +689,7 @@
 
 
 <!----JavaScript for testimonials carousel---->
-<script src="src/index.js"></script>
+<script src="src/gallery-slider.js"></script>
 <script src="src/counting-up-animation.js"></script>
 <script src="src/scroll-animations.js"></script>
 
