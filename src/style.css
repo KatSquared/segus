@@ -14,6 +14,7 @@
     --background: #fff;
     --transparent-black: rgba(0, 0, 0, 0.59);
     --transparent-white: rgba(255, 255, 255, 0.15);
+    --filter-to-hero: invert(85%) sepia(16%) saturate(5060%) hue-rotate(344deg) brightness(102%) contrast(101%);
 
     --big-vertical-margins: 16.5%;
     --small-vertical-margins: 10.3%;
@@ -195,6 +196,8 @@ button img {
     width: calc(100% - (var(--small-vertical-margins) * 2));
     margin: 0 var(--small-vertical-margins);
     object-fit: cover;
+    position: relative;
+    z-index: 20;
 }
 
 
@@ -407,6 +410,9 @@ nav.contact .phone-icon-container {
     font-size: 15px;
     font-weight: 600;
 }
+.menu-links a:hover, .menu-links li:hover {
+    color: var(--background);
+}
 .menu-contact::before {
     height: 1px;
     width: 100%;
@@ -416,6 +422,31 @@ nav.contact .phone-icon-container {
     margin: 15px 0; 
 }
 
+
+/* to top */
+
+.to-top {
+    position: fixed;
+    z-index: 30;
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.to-top img {
+    transform: scale(150%);
+    filter: invert();
+}
+.to-top:hover img {
+    filter: invert(85%) sepia(16%) saturate(5060%) hue-rotate(344deg) brightness(102%) contrast(101%);
+}
+
+/* media queries */
 
 @media (min-width: 700px) {
     .main-logo-container {
@@ -718,10 +749,16 @@ section.about img {
     .flex-container img {
         width: calc(50% + var(--big-vertical-gap));
     }
-    .flex-container div, .flex-container img {
+    .flex-container div {
         width: calc(100% - var(--big-vertical-margins));
     }
 
+}
+
+@media (min-width: 800px) and (max-width: 1099px) {
+    .flex-container div, .flex-container img {
+        width: 50%;
+    }
 }
 
 @media (min-width: 1100px) {
@@ -1069,12 +1106,13 @@ section.projects {
     flex-basis: calc(25% - var(--big-vertical-gap));
     max-width: 300px;
 }
-.number {
+.number, .number span {
     margin-bottom: 15px;
     font-size: 42px;
     line-height: 40px;
     font-weight: 700;
     white-space: nowrap;
+    color: var(--body-color);
 }
 .number-container:not(:last-child) {
     margin-bottom: calc(var(--big-vertical-gap) * 2);
@@ -1198,7 +1236,7 @@ section.testimonials {
     margin-bottom: -4px;
 }
 .slider-item-label img:hover {
-    filter: invert(85%) sepia(16%) saturate(5060%) hue-rotate(344deg) brightness(102%) contrast(101%);
+    filter: var(--filter-to-hero);
 }
 .testimonials .slider-track {
     gap: 12px;
@@ -1211,11 +1249,114 @@ section.testimonials {
     margin-top: 1px;
 }
 
-/* @media (max-width: 500px) {
-    .testimonials * {
-        pointer-events: none;
+/*-------------- Image preview popup ----------------*/
+
+.popup-container {
+    background-color: var(--transparent-black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 70;
+    transform: scale(100%);
+    opacity: 1;
+    transition: all 150ms ease-in-out;
+}
+
+.popup-container .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup-container.hidden .flex .flex{ 
+    transform: scale(75%);
+}
+
+.popup-container .flex > * {
+    box-sizing: border-box;
+}
+
+.popup-container .flex .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    width: max-content;
+    height: max-content;
+    max-height: 85vh;
+}
+  
+.popup-container > img {
+    color: var(--body-color);
+    width: 95px;
+    background-color: var(--transparent-white);
+    padding: 20px 24px; 
+    position: fixed;
+    z-index: 50;
+    filter: invert();
+}
+.popup-container .next-preview, .popup-container .prev-preview {
+    margin: 0;
+    top: 75%;
+    transform: translateY(-50%);
+}
+.popup-container .prev-preview img{
+    left: 0;
+    transform: scaleX(-100%);
+}
+.popup-container .next-preview {
+    right: 0;
+}
+.popup-container .close-preview {
+    right: 0;
+    top: 0;
+    padding: 16px 20px;
+    z-index: 35;
+}
+.popup-container > img:hover {
+    color: var(--hero); 
+}
+
+.enlarged-image {
+    position: relative;
+}
+.enlarged-image img{
+    object-fit: contain;
+    margin-bottom: -4px;
+    box-shadow: var(--body-color) 0px 0px 10px;
+    max-height: 85vh;
+    max-width: 100%;
+}
+
+.popup-container .next-preview, .popup-container .prev-preview {
+    margin: 0;
+    top: 101%;
+    transform: translateY(calc(-50% - 40px));
+}
+.popup-container .prev-preview {
+    transform: translateY(calc(-50% - 40px)) scaleX(-100%);
+}
+
+@media screen and (min-width: 700px) {
+    .popup-container .next-preview, .popup-container .prev-preview {
+        margin: 40px;
+        top: 50%;
     }
-} */
+    .popup-container .close-preview {
+        right: 40px;
+        top: 40px;
+    }
+}
+
+
 
 @media (min-width: 500px) {
     .testimonials .slider-item img:not(.slider-item-label img) {
@@ -1256,7 +1397,7 @@ section.testimonials {
         transform: translateY(-50%) translateX(70%);
     }
     .testimonials .slider-button:hover img{
-        filter: invert(85%) sepia(16%) saturate(5060%) hue-rotate(344deg) brightness(102%) contrast(101%);
+        filter: var(--filter-to-hero);
     }
 }
 
@@ -1302,6 +1443,11 @@ section.testimonials {
     width: 100%;
     text-align: center;
 }
+.contact-form button:hover {
+    background-color: var(--background);
+    outline: var(--body-color) 1px solid;
+    outline-offset: -1px;
+}
 .contact-form button h4 {
     text-align: center;
     width: 100%;
@@ -1319,8 +1465,6 @@ section.testimonials {
     margin-top: var(--horizontal-margins);
     margin-bottom: var(--horizontal-margins);
     height: 70vh !important;
-    position: relative;
-    z-index: 20;
 }
 iframe {
     height: 100%;
@@ -1340,6 +1484,28 @@ iframe {
     .contact-flex {
         display: flex;
         gap: var(--big-vertical-gap);
+    }
+}
+
+@media (max-width: 400px) {
+    .contact-form {
+        margin: 0;
+    }
+    .contact-form form, .contact-form form * {
+        border: none;
+    }
+    .contact-form form {
+        background-color: var(--hero);
+    }
+    .contact-form input, .contact-form textarea {
+       padding: 10px;
+       color: var(--body-color);
+    }
+    .contact-form textarea {
+        margin-top: 0;
+    }
+    .contact-form button {
+        border: var(--body-color) 1px solid;
     }
 }
 
@@ -1525,7 +1691,7 @@ display: none;
     color: var(--hero);
 }
 .footer-credit a:hover img {
-    filter: invert(85%) sepia(16%) saturate(5060%) hue-rotate(344deg) brightness(102%) contrast(101%);
+    filter: var(--filter-to-hero);
 
 }
 

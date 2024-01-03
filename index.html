@@ -94,6 +94,13 @@
     </div>
 </section>
 
+<!--- to top --->
+
+<div class="to-top"> 
+    <a href="#landing" aria-label="Click on arrow to scroll to the top of the page">
+        <img src="src/img/icon-top.svg" alt="Arrow pointing up">
+    </a>
+</div>
 
 
 <!---------- Main ----------->    
@@ -353,15 +360,15 @@
             <h4>LIDER W WOJ.<br>ZACHODNIOPOM</h4>
         </div>
         <div class="number-container">
-            <p class="number">20+</p>
+            <p class="number"><span class="countUp">20</span>+</p>
             <h4>LAT<br>W BRANŻY</h4>
         </div>
         <div class="number-container">
-            <p class="number">100+</p>
+            <p class="number"><span class="countUp">100</span>+</p>
             <h4>ZAKOŃCZONYCH<br>ZLECEŃ</h4>
         </div>
         <div class="number-container">
-            <p class="number">17 000+</p>
+            <p class="number"><span class="countUp">17000</span>+</p>
             <h4>METRÓW WYKONANYCH<br>INSTALACJI GAZOWYCH</h4>
         </div>
     </div>
@@ -461,37 +468,37 @@
 
         <div class="slider">
             <div class="slider-track" id="track">
-                <div class="slider-item">
+                <div class="slider-item" onclick="openPopup(this)">
                     <div class="slider-item-label">
                         <img src="./src/img/icon-zoom.svg" alt="Ikona lupy z plusem w środku" aria-label="Kliknij aby wyświetlić powiększony podgląd">
                     </div>
                     <img src="./src/img/rekomendacje/20101026195542referencje5.jpg" alt="List referencyjny od Szczecińskiej Spółdzielni Mieszkaniowej">
                 </div>
-                <div class="slider-item">
+                <div class="slider-item" onclick="openPopup(this)">
                     <div class="slider-item-label">
                         <img src="./src/img/icon-zoom.svg" alt="Ikona lupy z plusem w środku" aria-label="Kliknij aby wyświetlić powiększony podgląd">
                     </div>
                     <img src="./src/img/rekomendacje/2010102619569referencje6.jpg" alt="List referencyjny od Szkoły Podstawowej w Kołbaskowie">
                 </div>
-                <div class="slider-item">
+                <div class="slider-item" onclick="openPopup(this)">
                     <div class="slider-item-label">
                         <img src="./src/img/icon-zoom.svg" alt="Ikona lupy z plusem w środku" aria-label="Kliknij aby wyświetlić powiększony podgląd">
                     </div>
                     <img src="./src/img/rekomendacje/2010114171040ref3.png" alt="List referencyjny od Państwowej Szkoły Muzycznej w Szczecinie">
                 </div>
-                <div class="slider-item">
+                <div class="slider-item" onclick="openPopup(this)">
                     <div class="slider-item-label">
                         <img src="./src/img/icon-zoom.svg" alt="Ikona lupy z plusem w środku" aria-label="Kliknij aby wyświetlić powiększony podgląd">
                     </div>
                     <img src="./src/img/rekomendacje/2010114171739ref4.png" alt="Pierwszy list referencyjny od Gaz System">
                 </div>
-                <div class="slider-item">
+                <div class="slider-item" onclick="openPopup(this)">
                     <div class="slider-item-label">
                         <img src="./src/img/icon-zoom.svg" alt="Ikona lupy z plusem w środku" aria-label="Kliknij aby wyświetlić powiększony podgląd">
                     </div>
-                    <img src="./src/img/rekomendacje/201011417918ref2.png" alt="List referencyjny od Wielkopolskiej Spółki Gazownictwa">
+                    <img src="./src/img/rekomendacje/201011417918ref2.png" onclick="openPopup(this)" alt="List referencyjny od Wielkopolskiej Spółki Gazownictwa">
                 </div>
-                <div class="slider-item">
+                <div class="slider-item" onclick="openPopup(this)"> 
                     <div class="slider-item-label">
                         <img src="./src/img/icon-zoom.svg" alt="Ikona lupy z plusem w środku" aria-label="Kliknij aby wyświetlić powiększony podgląd">
                     </div>
@@ -503,8 +510,25 @@
         <button class="slider-button button-right" id="btnRight" aria-label="Kliknij by przejść do kolejnego slajdu">
             <img src="./src/img/arrow-right.svg" alt="Strzałka w prawo">
         </button> 
+
+        <!---------- Image preview popup ----------->
+
+        <div class="popup-container img-popup hidden" id="popup-container">
+            <img src="src/img/arrow-right.svg" class="prev-preview" id="imgNav" onclick="prevImg()">
+            <img src="src/img/icon-close.svg" class="close-preview" onclick="closePopup()">
+            <img src="src/img/arrow-right.svg" class="next-preview" id="imgNav" onclick="nextImg()">
+            <div class="flex">
+                <div class="flex hidden" id="popup">
+                    <div class="enlarged-image">
+                        <img src="public/images/2.jpg" id="enlarged-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
+
 
 <div class="horizontal-line section-divider"></div>
 
@@ -692,6 +716,7 @@
 <script src="src/gallery-slider.js"></script>
 <script src="src/counting-up-animation.js"></script>
 <script src="src/scroll-animations.js"></script>
+<script src="src/img-preview.js"></script>
 
 </body>
 </html>

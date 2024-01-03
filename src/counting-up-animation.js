@@ -29,6 +29,8 @@ const animateCountUp = el => {
 		// If we’ve reached our last frame, stop the animation
 		if ( frame === totalFrames ) {
 			clearInterval( counter );
+			// making sure it stops at the final number
+			el.innerHTML = countTo;
 		}
 	}, frameDuration );
 };
