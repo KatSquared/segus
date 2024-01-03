@@ -43,7 +43,7 @@ const countingObserver = new IntersectionObserver((entries) => {
 		if (entry.isIntersecting) {
 			runAnimations();
 		}
-		else return
+		else return;
 	});
 });
 // Run the animation on all elements with a class of ‘countup’
