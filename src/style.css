@@ -1576,8 +1576,8 @@ display: none;
 /* address and location */
 
 .location-and-address {
-    right: 3vw;
     height: calc(100% - 8vh) !important;
+    right: 3vw;
 }
 .address, .location > * {
     padding-left: 3vw;
@@ -1685,11 +1685,17 @@ display: none;
     .footer {
         height: 400px;
     }
+    .footer-info {
+        height: 400px;
+    }
 }
 @media (max-width: 499px) {
     .main-footer .footer-header {
         border-bottom: var(--transparent-border);
         border-top: var(--transparent-border);
+    }
+    .location-and-address {
+        height: max-content !important;
     }
 }
 
