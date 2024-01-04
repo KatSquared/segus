@@ -20,7 +20,7 @@
     --small-vertical-margins: 10.3%;
     --big-vertical-gap: 5%;
     --small-vertical-gap: 2%;
-    --horizontal-margins: 15vh;
+    --horizontal-margins: 120px;
 
     --transparent-border: rgba(255, 255, 255, 0.15) 1px solid;
 }
@@ -43,6 +43,11 @@ html, body {
     scroll-behavior: smooth;
     background-color: var(--background);
 } 
+div, section {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
 h1, h2, h3, p, a, button, span {
     position: relative;
@@ -72,7 +77,10 @@ h4 {
     padding: 0;
     text-transform: capitalize;
 }
-h2::after, h3::after, .underline {
+h3::after, h4::after {
+    content: none;
+}
+h2::after, .subsection-intro h3::after, .underline {
     content: '';
     width: 0%;
     height: 7px;
@@ -82,10 +90,10 @@ h2::after, h3::after, .underline {
     position: relative;
     z-index: 0 !important;
 }
-h3::after {
+.subsection-intro h3::after {
     margin-top: 0px;
 }
-h2.animating::after, h3.animating::after, .underline {
+h2.animating::after, .subsection-intro h3.animating::after, .underline {
     width: 120%;
     transition: width 500ms ease-in-out;
     transition-delay: 250ms;
@@ -222,6 +230,7 @@ button img {
 
 @media screen and (min-width: 800px) {
     :root {
+        --horizontal-margins: 15vh;
         --body-text-size: 14px;
     }
     .flex-container {
@@ -249,6 +258,7 @@ button img {
         line-height: 20px;
     }
 }
+
 
 
 
@@ -377,6 +387,7 @@ nav.contact .phone-icon-container {
     display: flex;
     width: 100%;
     justify-content: right;
+    -webkit-justify-content: flex-end;
     align-items: center;
     flex-direction: row;
 }
@@ -446,6 +457,7 @@ nav.contact .phone-icon-container {
 }
 .to-top img {
     transform: scale(150%);
+    -webkit-transform: scale(150%);
     filter: invert();
 }
 .to-top:hover img {
@@ -588,6 +600,9 @@ nav.contact .phone-icon-container {
 .sub-hero-button-container{
     width: 90%;
 }
+.sub-hero button {
+    white-space: nowrap;
+}
 .sub-hero {
     flex-direction: column-reverse;
     display: flex;
@@ -682,6 +697,7 @@ nav.contact .phone-icon-container {
 @media (max-width: 350px) {
     .sub-hero button {
         width: 100%;
+        white-space: wrap;
     }
 }
 
@@ -939,6 +955,7 @@ section.services {
     }
     .col-3{
         margin-right: 200px;
+        padding-bottom: calc(10vw - 10px);
     }
  }
 @media (min-width: 800px) {
@@ -963,6 +980,9 @@ section.services {
 @media (max-width: 799px) {
     .services {
         height: max-content;
+    }
+    .col-3 {
+        padding-bottom: 90px;
     }
 }
 
@@ -1029,6 +1049,10 @@ section.services {
     margin-bottom: var(--horizontal-margins)
 }
 
+.about .flex-container:last-child, .services-col:last-child, .why-us .flex-container:last-child, .why-us .flex-container:nth-child(5){
+    margin-bottom: 0;
+}
+
 @media screen and (min-width: 1100px) {
     .why-us-grid {
         margin-left: var(--big-vertical-margins);
@@ -1049,10 +1073,8 @@ section.services {
     .why-us-grid .flex-container {
         margin-bottom: var(--big-vertical-margins);
     }
-    .why-us .flex-container:last-child, .why-us .flex-container:nth-child(5) {
-        margin-bottom: 0;
-    }
 }
+
 
 @media (min-width: 400px) and (max-width: 1099px) {
     .why-us .flex-container:last-child, .why-us .flex-container:nth-child(5) {
@@ -1199,6 +1221,7 @@ section.testimonials {
     width: 100%;
     z-index: 70;
     transform: scale(100%);
+    -webkit-transform: scale(100%);
     opacity: 1;
     transition: all 150ms ease-in-out;
 }
@@ -1217,6 +1240,7 @@ section.testimonials {
 
 .popup-container.hidden .flex .flex{ 
     transform: scale(75%);
+    -webkit-transform: scale(75%);
 }
 
 .popup-container .flex > * {
@@ -1250,6 +1274,7 @@ section.testimonials {
 .popup-container .prev-preview img{
     left: 0;
     transform: scaleX(-100%);
+    -webkit-transform: scaleX(-100%);
 }
 .popup-container .next-preview {
     right: 0;
@@ -1282,6 +1307,7 @@ section.testimonials {
 }
 .popup-container .prev-preview {
     transform: translateY(calc(-50% - 40px)) scaleX(-100%);
+    -webkit-transform: translateY(calc(-50% - 40px)) scaleX(-100%);
 }
 
 @media screen and (min-width: 700px) {
@@ -1330,6 +1356,7 @@ section.testimonials {
     }
     .slider-button.button-left img {
         transform:scaleX(-100%);
+        -webkit-transform: scaleX(-100%);
     }
     .slider-button.button-right {
         right: calc(var(--big-vertical-margins) / 2);
@@ -1355,6 +1382,8 @@ section.testimonials {
     border: var(--body-color) 1px solid;
     width: 100%;
     max-width: 700px;
+    position: relative;
+    z-index: 2;
 }
 
 .contact-form input {

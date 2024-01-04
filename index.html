@@ -117,7 +117,7 @@
         <div class="sub-hero-container">
             <div class="sub-hero">
                 <div class="sub-hero-button-container">
-                    <button onclick="window.location.href='#oferta';" aria-label="Kliknij by przejść do formularza kontaktowego">
+                    <button href="#contact" onclick="window.location.href='#oferta';" aria-label="Kliknij by przejść do formularza kontaktowego">
                         SKONTAKTUJ SIĘ Z NAMI
                         <img src="./src/img/arrow-right.svg" alt="Strzałka w prawo">
                     </button>
@@ -573,7 +573,7 @@
     document.addEventListener('click', (e) => {
         if (isMenuOpen) 
             if (!e.target.closest('#menuLinks') || (e.target.closest('.menu-nav li'))) 
-            hideMenu();
+                hideMenu();
     })
 </script> 
 
