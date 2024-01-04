@@ -1428,7 +1428,7 @@ iframe {
     .contact-form form, .contact-form form * {
         border: none;
     }
-    .contact-form form > * {
+    .contact-form form {
         padding: 30px var(--small-vertical-margins);
     }
     .contact-form form {
