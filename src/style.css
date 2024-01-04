@@ -1427,7 +1427,9 @@ iframe {
     }
     .contact-form form, .contact-form form * {
         border: none;
-        padding: var(--small-vertical-margins);
+    }
+    .contact-form form > * {
+        padding: 30px var(--small-vertical-margins);
     }
     .contact-form form {
         background-color: var(--hero);
