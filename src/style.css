@@ -960,6 +960,11 @@ section.services {
         height: 35px;
     }
 }
+@media (max-width: 799px) {
+    .services {
+        height: max-content;
+    }
+}
 
 /* why us */
 
