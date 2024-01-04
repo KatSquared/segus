@@ -1638,6 +1638,10 @@ display: none;
     }
 } 
 @media (max-width: 319px) {
+    .footer{ 
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
     .footer-underline {
         position: absolute;
         top: 0;
@@ -1689,7 +1693,9 @@ display: none;
 
 @media (min-width: 320px) and (max-width: 499px) {
     .footer {
-        height: 780px;
+        height: 820px;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
     .main-footer {
         position: absolute;
