@@ -572,7 +572,7 @@
 
     document.addEventListener('click', (e) => {
         if (isMenuOpen) 
-            if (!e.target.closest('#menuLinks')) 
+            if (!e.target.closest('#menuLinks') || (e.target.closest('.menu-nav li'))) 
             hideMenu();
     })
 </script> 
