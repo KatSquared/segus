@@ -572,9 +572,9 @@ nav.contact .phone-icon-container {
 }
 
 .hero-container {
+    top: 46%;
     margin-top: 0;
     position: absolute;
-    top: 50%;
     transform: translateY(-45%);
     width: 100%;
 }
@@ -642,6 +642,9 @@ nav.contact .phone-icon-container {
 
 
 @media (min-width: 800px) {
+    .hero-container {
+        top: 50%;
+    }
     .hero .underline {
         width: 300px;
     }
@@ -1326,7 +1329,7 @@ section.testimonials {
 
 .popup-container .next-preview, .popup-container .prev-preview {
     margin: 0;
-    top: 101vh;
+    top: 95%;
     transform: translateY(calc(-50% - 40px));
 }
 .popup-container .prev-preview {
