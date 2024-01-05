@@ -1306,8 +1306,6 @@ section.testimonials {
 }
 .popup-container .prev-preview img{
     left: 0;
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
 }
 .popup-container .next-preview {
     right: 0;
@@ -1339,8 +1337,8 @@ section.testimonials {
     transform: translateY(calc(-50% - 40px));
 }
 .popup-container .prev-preview {
-    transform: translateY(calc(-50% - 40px)) scaleX(-100%);
-    -webkit-transform: translateY(calc(-50% - 40px)) scaleX(-100%);
+    transform: translateY(calc(-50% - 40px));
+    -webkit-transform: translateY(calc(-50% - 40px));
 }
 
 @media screen and (min-width: 700px) {
