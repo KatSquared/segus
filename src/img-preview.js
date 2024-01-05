@@ -10,6 +10,7 @@ const allImages = Array.from(document.querySelectorAll('.testimonials .slider-it
 const sliderBtnLeft = document.getElementById('btnLeft');
 const sliderBtnRight = document.getElementById('btnRight');
 const toTopBtn = document.querySelector('.to-top');
+const topNav = document.querySelector('.nav-container');
 
 let currentImg;
 let currentImgIndex = 0;
@@ -25,6 +26,7 @@ function openPopup(element) {
     sliderBtnLeft.classList.add('hidden');
     sliderBtnRight.classList.add('hidden');
     toTopBtn.classList.add('hidden');
+    topNav.classList.add('hidden');
 
     currentImg = element.children[1];
 
@@ -50,6 +52,7 @@ function closePopup() {
     sliderBtnLeft.classList.remove('hidden');
     sliderBtnRight.classList.remove('hidden');
     toTopBtn.classList.remove('hidden');
+    topNav.classList.remove('hidden');
 
     isPopupOpen = false;
 }

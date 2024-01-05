@@ -20,7 +20,7 @@
     --small-vertical-margins: 10.3%;
     --big-vertical-gap: 5%;
     --small-vertical-gap: 2%;
-    --horizontal-margins: 120px;
+    --horizontal-margins: 90px;
 
     --transparent-border: rgba(255, 255, 255, 0.15) 1px solid;
 }
@@ -47,6 +47,7 @@ div, section {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    scroll-margin-top: 90px !important;
 }
 
 h1, h2, h3, p, a, button, span {
@@ -204,11 +205,18 @@ button img {
 }
 
 .mid-width {
-    width: calc(100% - (var(--small-vertical-margins) * 2));
-    margin: 0 var(--small-vertical-margins);
+    width: 100%;
+    margin: 0;
     object-fit: cover;
     position: relative;
     z-index: 20;
+}
+
+@media (min-width: 400px) {
+    .mid-width {
+        width: calc(100% - (var(--small-vertical-margins) * 2));
+        margin: 0 var(--small-vertical-margins);
+    }
 }
 
 
@@ -619,7 +627,7 @@ nav.contact .phone-icon-container {
 .sub-hero p{
     margin-top: 10px;
     width: 90%;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 16px;
     color: var(--background);
     font-weight: 500;
@@ -760,6 +768,12 @@ section.about img {
     z-index: 2;
 }
 
+@media (max-width: 799px) {
+    .about .flex-container:last-child {
+        margin-bottom: 0;
+    }
+}
+
 
 @media (min-width: 800px) {
     .about .flex-container {
@@ -896,6 +910,7 @@ section.services {
     padding-bottom: 4px;
 }
 
+
 @media (min-width: 1510px){
     .grid{
         grid-template-columns: 
@@ -981,8 +996,15 @@ section.services {
     .services {
         height: max-content;
     }
+    .services li::before {
+        font-size: 0.9rem;
+        padding-right: 10px;
+    }
+    .services-col:last-child, .services .grid, .services {
+        margin-bottom: 0;
+    }
     .col-3 {
-        padding-bottom: 90px;
+        padding-bottom: var(--horizontal-margins);
     }
 }
 
@@ -1049,8 +1071,10 @@ section.services {
     margin-bottom: var(--horizontal-margins)
 }
 
-.about .flex-container:last-child, .services-col:last-child, .why-us .flex-container:last-child, .why-us .flex-container:nth-child(5){
-    margin-bottom: 0;
+@media (max-width: 799px) {
+    .why-us, .why-us .flex-container:last-child, .why-us .flex-container:nth-child(5){
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (min-width: 1100px) {
@@ -1302,7 +1326,7 @@ section.testimonials {
 
 .popup-container .next-preview, .popup-container .prev-preview {
     margin: 0;
-    top: 101%;
+    top: 101vh;
     transform: translateY(calc(-50% - 40px));
 }
 .popup-container .prev-preview {
