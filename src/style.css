@@ -996,18 +996,24 @@ section.services {
     }
 }
 @media (max-width: 799px) {
-    .services {
-        height: max-content;
-    }
     .services li::before {
         font-size: 0.9rem;
-        padding-right: 10px;
+        padding-right: 15px;
+    }
+    .services {
+        height: max-content;
     }
     .services-col:last-child, .services .grid, .services {
         margin-bottom: 0;
     }
     .col-3 {
         padding-bottom: var(--horizontal-margins);
+    }
+}
+@media (max-width: 399px) {
+    .services li::before {
+        font-size: 0.7rem;
+        padding-right: 13px;
     }
 }
 
@@ -1300,8 +1306,8 @@ section.testimonials {
 }
 .popup-container .prev-preview img{
     left: 0;
-    transform: scaleX(-100%);
-    -webkit-transform: scaleX(-100%);
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 .popup-container .next-preview {
     right: 0;
