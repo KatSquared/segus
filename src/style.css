@@ -1747,11 +1747,11 @@ display: none;
 
 
 @media (min-width: 500px) {
-    .footer {
-        height: 400px;
+    .footer, .footer-info {
+        height: 500px;
     }
-    .footer-info {
-        height: 400px;
+    .address {
+        padding-bottom: 6rem;
     }
 }
 @media (max-width: 499px) {
@@ -1766,7 +1766,7 @@ display: none;
 
 @media (min-width: 320px) and (max-width: 499px) {
     .footer {
-        height: 820px;
+        height: 900px;
         margin-bottom: 0;
         padding-bottom: 0;
     }
